@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saji Pillai - Technology Leader & Innovation Expert</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .tagline {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s;
+        }
+
+        .contact-info a:hover {
+            transform: translateY(-2px);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .github-projects {
+            margin-top: 30px;
+        }
+
+        .project-category {
+            margin-bottom: 40px;
+        }
+
+        .project-category h3 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-left-color: #764ba2;
+        }
+
+        .project-card h4 {
+            color: #764ba2;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-icon {
+            font-size: 1.5em;
+        }
+
+        .project-description {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .github-link:hover {
+            color: #764ba2;
+        }
+
+        .github-link::before {
+            content: "→ ";
+        }
+
+        .key-features {
+            margin-top: 12px;
+            padding-left: 20px;
+        }
+
+        .key-features li {
+            color: #555;
+            margin-bottom: 5px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .key-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .innovation-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Saji Pillai</h1>
+            <p class="tagline">Technology Leader | AI Innovation Expert | Payment Systems & Product Management</p>
+            <div class="contact-info">
+                <a href="mailto:saji651970@gmail.com">
+                    <span>✉</span> saji651970@gmail.com
+                </a>
+                <a href="tel:+12204651248">
+                    <span>☎</span> (220) 465-1248
+                </a>
+                <a href="https://github.com/saji1970" target="_blank">
+                    <span>⚡</span> GitHub: saji1970
+                </a>
+                <a>
+                    <span>📍</span> Duluth, GA 30096
+                </a>
+            </div>
+        </header>
+
+        <div class="content">
+            <section id="summary">
+                <h2>Professional Summary</h2>
+                <p class="summary">
+                    Dynamic and results-driven technology leader with over <strong>30 years of global experience</strong> across Payments, Cards, Core Banking, and Telecom Billing, delivering complex modernization and transformation programs for Tier-1 banks and payment providers across the US, Europe, Middle East, ANZ, and APAC.
+                </p>
+                <p class="summary" style="margin-top: 15px;">
+                    Recognized as a <strong>Techno-Functional Expert</strong> with deep domain knowledge across industry-standard protocols including ISO 20022 (SWIFT MX, CBPR+, HVPS+), ISO 8583, SWIFT MT, Fedwire ANSI, ACH, and ATM device integrations. Currently building innovative AI-powered solutions and next-generation social media platforms while maintaining expertise in enterprise payment systems.
+                </p>
+            </section>
+
+            <section id="innovation-projects" class="github-projects">
+                <h2>🚀 Innovation Projects & GitHub Portfolio</h2>
+                
+                <div class="project-category">
+                    <h3>🤖 AI & Machine Learning Projects</h3>
+                    
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h4>
+                                <span class="project-icon">📈</span>
+                                Investment Bot
+                                <span class="innovation-badge">NEW</span>
+                            </h4>
+                            <p class="project-description">
+                                AI-powered trading agent bot that analyzes stock market data and provides intelligent investment recommendations. Features a ChatGPT-like interface for natural language queries about stocks, market trends, and investment strategies.
+                            </p>
+                            <ul class="key-features">
+                                <li>Natural language query interface for stock analysis</li>
+                                <li>Real-time market data integration</li>
+                                <li>AI-driven investment recommendations</li>
+                                <li>ChatGPT-style conversational AI interface</li>
+                                <li>Stock sentiment analysis and prediction models</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenAI</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Stock APIs</span>
+                            </div>
+                            <a href="https://github.com/saji1970/investmentbot" target="_blank" class="github-link">View on GitHub</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>
+                                <span class="project-icon">🔍</span>
+                                Payment Support Log Analyzer
+                                <span class="innovation-badge">AI-POWERED</span>
+                            </h4>
+                            <p class="project-description">
+                                Advanced AI model for analyzing payment system support logs, specifically designed for ISO 20022 SWIFT CBPR+ messages. Automatically identifies issues, patterns, and anomalies in payment processing workflows.
+                            </p>
+                            <ul class="key-features">
+                                <li>ISO 20022 SWIFT CBPR+ message parsing</li>
+                                <li>Automated issue detection and classification</li>
+                                <li>Pattern recognition for recurring problems</li>
+                                <li>Intelligent log analysis and reporting</li>
+                                <li>Compliance validation and error prediction</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">AI/ML</span>
+                                <span class="tech-tag">ISO 20022</span>
+                                <span class="tech-tag">SWIFT</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Log Analysis</span>
+                            </div>
+                            <a href="https://github.com/saji1970" target="_blank" class="github-link">View on GitHub</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>
+                                <span class="project-icon">📊</span>
+                                Sentiment Analysis Platform
+                            </h4>
+                            <p class="project-description">
+                                Machine learning platform for sentiment analysis with applications in financial markets, customer feedback, and social media monitoring.
+                            </p>
+                            <ul class="key-features">
+                                <li>Multi-source sentiment analysis</li>
+                                <li>Real-time data processing</li>
+                                <li>Jupyter Notebook visualizations</li>
+                                <li>Custom ML model training</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Jupyter</span>
+                                <span class="tech-tag">ML Models</span>
+                                <span class="tech-tag">Data Analysis</span>
+                            </div>
+                            <a href="https://github.com/saji1970/SentimentalAnalysus" target="_blank" class="github-link">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-category">
+                    <h3>📱 Next-Generation Social Media Apps</h3>
+                    
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h4>
+                                <span class="project-icon">🎙️</span>
+                                GossipIN
+                                <span class="innovation-badge">AR/VR READY</span>
+                                <span class="innovation-badge" style="background: #28a745;">AI-SAFE</span>
+                            </h4>
+                            <p class="project-description">
+                                Revolutionary voice-enabled chat application designed for the future of AR/VR glasses. Built on the vision that AR/VR glasses will replace mobile devices, GossipIN provides a hands-free, voice-first social experience with intelligent AI safety features.
+                            </p>
+                            <ul class="key-features">
+                                <li>Voice-enabled chat interface optimized for AR/VR</li>
+                                <li>Hands-free operation for smart glasses</li>
+                                <li>Spatial audio integration</li>
+                                <li><strong>AI Vocabulary Learning:</strong> Understands GenX and GenZ slang, evolving language patterns, and generational communication styles</li>
+                                <li><strong>AI-Powered Anti-Bullying:</strong> Real-time chat monitoring to detect and prevent cyberbullying, harassment, and toxic behavior</li>
+                                <li>Adaptive voice commands with contextual understanding</li>
+                                <li>Real-time voice-to-text and text-to-voice</li>
+                                <li>Designed for Meta Quest, Apple Vision Pro compatibility</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Voice Recognition</span>
+                                <span class="tech-tag">AR/VR SDK</span>
+                                <span class="tech-tag">WebRTC</span>
+                                <span class="tech-tag">Spatial Audio</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">ML Safety</span>
+                                <span class="tech-tag">Sentiment Analysis</span>
+                            </div>
+                            <a href="https://github.com/saji1970" target="_blank" class="github-link">View on GitHub</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>
+                                <span class="project-icon">📢</span>
+                                BuzzIt
+                                <span class="innovation-badge">LIVE STREAMING</span>
+                            </h4>
+                            <p class="project-description">
+                                Event broadcasting and social sharing platform that enables musicians, event organizers, and social functions to instantly "buzz" their events and share across multiple social media platforms simultaneously.
+                            </p>
+                            <ul class="key-features">
+                                <li>Live event broadcasting using Amazon IVS</li>
+                                <li>Multi-platform sharing (WhatsApp, Instagram, Snapchat, Facebook)</li>
+                                <li>Real-time event notifications and alerts</li>
+                                <li>Musician and performer promotion tools</li>
+                                <li>Social function event management</li>
+                                <li>Cross-platform video streaming</li>
+                                <li>Event discovery and social engagement features</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Amazon IVS</span>
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Social APIs</span>
+                                <span class="tech-tag">Live Streaming</span>
+                                <span class="tech-tag">WebRTC</span>
+                            </div>
+                            <a href="https://github.com/saji1970" target="_blank" class="github-link">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-category">
+                    <h3>💳 Payment & FinTech Innovation</h3>
+                    
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h4>
+                                <span class="project-icon">🔐</span>
+                                OpenPaymentToken
+                                <span class="innovation-badge">OPEN SOURCE</span>
+                            </h4>
+                            <p class="project-description">
+                                World's first free, open-source, secure token origination and token processing platform. Simplifies payment processing with enterprise-grade tokenization capabilities available to everyone.
+                            </p>
+                            <ul class="key-features">
+                                <li>Secure token origination and processing</li>
+                                <li>PCI-DSS compliant tokenization</li>
+                                <li>Open-source payment security</li>
+                                <li>Multi-provider token management</li>
+                                <li>API-first architecture</li>
+                                <li>Enterprise-grade security, free to use</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Payment Security</span>
+                                <span class="tech-tag">Tokenization</span>
+                                <span class="tech-tag">PCI-DSS</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Open Source</span>
+                            </div>
+                            <a href="https://github.com/saji1970/openpaymenttoken" target="_blank" class="github-link">View on GitHub</a>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>
+                                <span class="project-icon">🏠</span>
+                                BackpackersHome
+                            </h4>
+                            <p class="project-description">
+                                Travel and accommodation platform connecting backpackers with local hosts and experiences worldwide.
+                            </p>
+                            <ul class="key-features">
+                                <li>Peer-to-peer accommodation marketplace</li>
+                                <li>Traveler community platform</li>
+                                <li>Local experience sharing</li>
+                                <li>Booking and payment integration</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Full Stack</span>
+                                <span class="tech-tag">Payment Gateway</span>
+                                <span class="tech-tag">Social Platform</span>
+                            </div>
+                            <a href="https://github.com/saji1970/backpackershome" target="_blank" class="github-link">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3 style="margin-top: 0;">🎯 Innovation Focus Areas</h3>
+                    <p style="margin-top: 10px; color: #555;">
+                        <strong>Future of Computing:</strong> Building applications for the next generation of devices - AR/VR glasses that will replace smartphones<br><br>
+                        <strong>AI-First Approach:</strong> Leveraging AI/ML for financial analysis, payment systems, and conversational interfaces<br><br>
+                        <strong>Open Source Contribution:</strong> Creating free, enterprise-grade solutions accessible to everyone<br><br>
+                        <strong>Cross-Platform Integration:</strong> Building solutions that seamlessly work across multiple social media and communication platforms
+                    </p>
+                </div>
+            </section>
+
+            <section id="github-stats">
+                <h2>📊 GitHub Activity</h2>
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+                    <div style="text-align: center; flex: 1; min-width: 200px;">
+                        <div style="font-size: 3em; color: #667eea; font-weight: bold;">4+</div>
+                        <div style="color: #555;">Public Repositories</div>
+                    </div>
+                    <div style="text-align: center; flex: 1; min-width: 200px;">
+                        <div style="font-size: 3em; color: #764ba2; font-weight: bold;">AI/ML</div>
+                        <div style="color: #555;">Specialization</div>
+                    </div>
+                    <div style="text-align: center; flex: 1; min-width: 200px;">
+                        <div style="font-size: 3em; color: #667eea; font-weight: bold;">AR/VR</div>
+                        <div style="color: #555;">Innovation Focus</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 30px; color: #555;">
+                    <a href="https://github.com/saji1970" target="_blank" style="color: #667eea; text-decoration: none; font-weight: bold; font-size: 1.1em;">
+                        🔗 Visit GitHub Profile: github.com/saji1970
+                    </a>
+                </p>
+            </section>
+
+            <!-- Rest of the resume continues with work experience, skills, etc. -->
+            <section id="note">
+                <div class="highlight-box">
+                    <p style="font-size: 1.1em; text-align: center;">
+                        <strong>💡 Combining 30 years of enterprise experience with cutting-edge innovation</strong><br>
+                        From building payment systems for Fortune 500 banks to creating the next generation of AI and AR/VR applications
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Saji Pillai. All rights reserved.</p>
+            <p>Technology Leader | AI Innovation Expert | Payment Systems & Product Management</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/saji1970" target="_blank" style="color: white; text-decoration: none;">GitHub</a> | 
+                <a href="mailto:saji651970@gmail.com" style="color: white; text-decoration: none;">Email</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
