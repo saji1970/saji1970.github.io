@@ -374,6 +374,24 @@
             font-weight: bold;
             margin-left: 10px;
         }
+        .download-btn {
+            background: white;
+            color: #667eea;
+            border: 2px solid white;
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 600;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .download-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+        }
     </style>
 </head>
 <body>
@@ -394,6 +412,11 @@
                 <a>
                     <span class="icon">📍</span> Duluth, GA 30096
                 </a>
+            </div>
+            <div style="margin-top: 25px;">
+                <button onclick="downloadATS()" class="download-btn">
+                    📄 Download ATS-Compatible Resume
+                </button>
             </div>
         </header>
 
@@ -995,6 +1018,282 @@
             </p>
         </footer>
     </div>
+
+    <script>
+    function downloadATS() {
+        const atsContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saji Pillai - Resume</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #000000;
+            max-width: 8.5in;
+            margin: 0.5in auto;
+            padding: 0;
+            font-size: 11pt;
+        }
+        h1 {
+            font-size: 18pt;
+            margin-bottom: 5pt;
+            text-align: center;
+        }
+        h2 {
+            font-size: 14pt;
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+            border-bottom: 1pt solid #000000;
+        }
+        h3 {
+            font-size: 12pt;
+            margin-top: 8pt;
+            margin-bottom: 4pt;
+        }
+        .contact {
+            text-align: center;
+            margin-bottom: 10pt;
+        }
+        .job-header {
+            margin-top: 10pt;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        .company {
+            font-weight: bold;
+        }
+        .date {
+            font-style: italic;
+        }
+        ul {
+            margin-top: 5pt;
+            margin-bottom: 5pt;
+            padding-left: 20pt;
+        }
+        li {
+            margin-bottom: 3pt;
+        }
+        .skills {
+            margin-bottom: 5pt;
+        }
+        p {
+            margin-top: 5pt;
+            margin-bottom: 5pt;
+        }
+        @media print {
+            body { margin: 0.5in; }
+        }
+    </style>
+</head>
+<body>
+    <h1>SAJI PILLAI</h1>
+    <div class="contact">
+        Duluth, GA 30096 | (220) 465-1248 | saji651970@gmail.com | GitHub: github.com/saji1970
+    </div>
+
+    <h2>PROFESSIONAL SUMMARY</h2>
+    <p>
+        Dynamic and results-driven technology leader with over 30 years of global experience across Payments, Cards, Core Banking, and Telecom Billing, delivering complex modernization and transformation programs for Tier-1 banks and payment providers across the US, Europe, Middle East, ANZ, and APAC.
+    </p>
+    <p>
+        Recognized as a Techno-Functional Expert with deep domain knowledge across industry-standard protocols including ISO 20022 (SWIFT MX, CBPR+, HVPS+), ISO 8583, SWIFT MT, Fedwire ANSI, ACH, and ATM device integrations. Proven track record of delivering multimillion-dollar portfolios with innovations recognized by Stevie Awards and client accolades.
+    </p>
+
+    <h2>KEY EXPERTISE & CAPABILITIES</h2>
+    <div class="skills">
+        <p><strong>Payments & Card Systems:</strong> Retail, Debit, Credit, and Prepaid card systems; Tokenization; Fraud detection (FICO Falcon); Authorization Switches; Clearing & Settlement; PCI DSS standards</p>
+        <p><strong>Payment Gateways:</strong> Designed and launched eCommerce Payment Gateways certified for Visa 3D Secure (3DS) and Mastercard SecureCode. Integrated Verifone MPI, Worldpay, Visa Cybersource, Mastercard MPGS</p>
+        <p><strong>Core Banking & Trade Finance:</strong> Deposits, Lending, Trade Finance, LC/BG processing. Led modernization of ATM Switches, Payment Hubs, and Card Platforms</p>
+        <p><strong>Conversational AI & Search:</strong> Built AI copilots using RASA, VertexAI, OpenAI to interpret ISO 20022 messages. Designed conversational search engines with Hugging Face and OLAMA</p>
+        <p><strong>Product & UX Delivery:</strong> Led end-to-end branding, UI/UX design using Figma and Adobe AEM. Authored SOPs and created merchant training using Adobe Captivate</p>
+        <p><strong>Agile Leadership:</strong> Certified Scrum Master and SAFe-trained Agile Product Owner with experience driving sprints, managing backlogs, and aligning OKRs across global teams</p>
+        <p><strong>Agentic Commerce & AI Protocols:</strong> Implemented Google AP2 Protocol for Agent Payment Protocol, Model Context Protocol (MCP), and A2A (Agent-to-Agent) protocol for Agentic Commerce. Expert in integrating AI agents with eCommerce stores and MCP servers</p>
+    </div>
+
+    <h2>PROFESSIONAL EXPERIENCE</h2>
+
+    <div class="job-header">
+        <div class="job-title">Vice President Product Management</div>
+        <div class="company">Chase Bank - USA</div>
+        <div class="date">July 2023 - Present</div>
+    </div>
+    <ul>
+        <li>Product Manager for Chase Credit Cards Loyalty Rewards and Benefits, responsible for defining product strategy and roadmap</li>
+        <li>Integrated product with Adobe Analytics tracking user events, new user registration, page access, and customer retention metrics</li>
+        <li>Led design sessions with UX team to improve customer journeys using funnel analysis and Figma</li>
+        <li>Built and designed Conversational Search Engine POC for Card Product Catalog using RASA, Python, and LLMSuite (OLAMA2)</li>
+        <li>Managed product backlog refinement and sprint planning for Scrum teams using Jira</li>
+        <li>Defined cloud-native platform requirements and customer experience strategies</li>
+    </ul>
+
+    <div class="job-header">
+        <div class="job-title">Senior Director Delivery - Payments and Cards</div>
+        <div class="company">Virtusa - USA</div>
+        <div class="date">February 2014 - July 2023</div>
+    </div>
+    <ul>
+        <li>Led Payment Practice achieving $50M+ revenue with 15% YoY growth over four years</li>
+        <li>Solution Architect for Nordea PSP Payment Gateway, integrating Verifone eCommerce MPI for omnichannel PSP payments</li>
+        <li>Scaled Citi Bank India payment gateway to support large transaction volumes</li>
+        <li>Product Management for CDD (Customer Due Diligence), OFAC Screening, Credit Screening, PEP Screening, and Fraud Screening applications</li>
+        <li>Integrated with Experian for AVS and Credit Screening, and FICO Falcon for fraud detection</li>
+        <li>Built AI/ML application with rules engine to reduce false positives in legacy FICO case management system</li>
+        <li>Managed large migration/modernization programs for ATM Switch, Credit Card, and Payment Programs across multiple geographies</li>
+        <li>Developed and executed Virtusa's payment strategy, securing over 10 new clients in the payment space</li>
+        <li>Award-winning innovations: Smart ATM thin client, Augmented Reality Branch Platform (using FrameVR), mPOS platform - Won Stevie Business Award in 2015</li>
+        <li>Enhanced team billability by 100% through effective leadership, significantly impacting corporate profitability</li>
+    </ul>
+
+    <div class="job-header">
+        <div class="job-title">Delivery Head - Cards and Ecommerce Payment Gateway</div>
+        <div class="company">Plintron Global Services India Limited - Chennai, India</div>
+        <div class="date">April 2011 - January 2014</div>
+    </div>
+    <ul>
+        <li>Managed prepaid card platform for Plintron in the UK, leading product line development</li>
+        <li>Scaled prepaid card operations from 10,000 cards to 5 million within specified timeframe</li>
+        <li>Expanded team from 4 to over 50 members</li>
+        <li>Integrated with Experian API for AVS and PEP Checks during Consumer Due Diligence</li>
+        <li>Launched prepaid products successfully in Australia, UK, and France markets</li>
+        <li>Established Postpaid Billing platform and P2P payment platform, generating new revenue streams</li>
+        <li>Consolidated Lyca's Payment Engine for unified payment solution across regions and providers</li>
+    </ul>
+
+    <div class="job-header">
+        <div class="job-title">Product & Professional Service Head - Core Banking</div>
+        <div class="company">Datavision Software Solution Private Limited - Pune, India</div>
+        <div class="date">November 2008 - April 2011</div>
+    </div>
+    <ul>
+        <li>Product Head of flagship products: Datamate, Micromate, Riskmate, AMLOMate, Mobilemate, Loan Appraisal System</li>
+        <li>Implemented AML transaction monitoring in AMLOMate, creating STR and CRT reports for Reserve Bank of India compliance</li>
+        <li>Built new products for emerging markets including Islamic Microfinance/Banking for South Asia and Middle East</li>
+        <li>Developed MRDs, PRDs, and core product messaging</li>
+        <li>Managed project teams for CBS implementation and provided functional requirements using UML</li>
+    </ul>
+
+    <div class="job-header">
+        <div class="job-title">Project Manager - Payment and Enterprise Teller</div>
+        <div class="company">S1 Enterprise - Pune, India</div>
+        <div class="date">December 2006 - November 2008</div>
+    </div>
+    <ul>
+        <li>SEPA Migration - KBC Bank Brussels: Spearheaded successful SEPA functionality implementation within WISE Application for cross-border and domestic payments, achieving 43% profit margin</li>
+        <li>Enterprise Teller Implementation - Kasikorn Bank (K-Bank), Thailand: Managed end-to-end deployment leading 65-member global team across Thailand, India, China, and Dublin</li>
+        <li>Oversaw integration with Temenos core banking and 200+ backend hosts including Enterprise Teller, CMS, CIS, Transact, and CRM systems</li>
+        <li>Utilized Agile practices with Whizible and JIRA for project tracking and performance metrics</li>
+    </ul>
+
+    <div class="job-header">
+        <div class="job-title">Product Head - EFT Switch and Ecommerce Payment Gateway</div>
+        <div class="company">Opus Software Solutions Limited - Pune, India</div>
+        <div class="date">January 2005 - December 2006</div>
+    </div>
+    <ul>
+        <li>Led 23-member team managing Electra Switch, ePG - Electra Payment Gateway, Electra MPI (VISA/MC 3D Secure), and Electra ACS</li>
+        <li>Developed and designed new 3D Secure (ACS and MPI) products as add-on to Electra Payment Gateway</li>
+        <li>Successfully installed at 43 locations including Central Bank of India (500+ ATMs), Corporation Bank (1000+ ATMs), and Dena Bank (500+ ATMs)</li>
+        <li>Integrated with LexisNexis for OFAC and PEP checks during card origination</li>
+        <li>Currently used by ICICI Bank for internet payment and eCommerce transactions</li>
+    </ul>
+
+    <h3>Earlier Career Highlights (1993-2005)</h3>
+    <p><strong>Product Head</strong> - Onward Eservices Limited (2003-2005): Led 45-member team for retail/consumer banking solutions</p>
+    <p><strong>Delivery Manager</strong> - Datavision Software (2001-2003): Design and development of core banking product "Datamate"</p>
+    <p><strong>Delivery Manager & Sr. Programmer</strong> - Nextstep Infotech (1997-2001): Designed and developed "Fast Cheque Collection" and "Any Branch Banking" systems</p>
+    <p><strong>Programmer</strong> - Supertech Software Solution (1994-1997): Developed BankPlus Core Banking Module in COBOL and ported to AS/400</p>
+
+    <h2>INNOVATION PROJECTS & GITHUB PORTFOLIO</h2>
+
+    <h3>AI & Machine Learning Projects</h3>
+    <p><strong>Investment Bot:</strong> AI-powered trading agent bot that analyzes stock market data and provides intelligent investment recommendations. Features ChatGPT-like interface for natural language queries about stocks, market trends, and investment strategies. Technologies: Python, OpenAI, Machine Learning, NLP, Stock APIs</p>
+
+    <p><strong>Payment Support Log Analyzer:</strong> Advanced AI model for analyzing payment system support logs, specifically designed for ISO 20022 SWIFT CBPR+ messages. Automatically identifies issues, patterns, and anomalies in payment processing workflows. Technologies: Python, AI/ML, ISO 20022, SWIFT, NLP, Log Analysis</p>
+
+    <p><strong>Agentic eCommerce Platform:</strong> Revolutionary AI-powered eCommerce platform implementing Google AP2 (Agent Payment Protocol), Model Context Protocol (MCP), and Agent-to-Agent (A2A) protocols for autonomous commerce transactions. Enables AI agents to shop, negotiate, and complete purchases on behalf of users. Technologies: Google AP2, MCP, A2A Protocol, AI Agents, Python, Payment APIs, LLM Integration</p>
+
+    <p><strong>Sentiment Analysis Platform:</strong> Machine learning platform for sentiment analysis with applications in financial markets, customer feedback, and social media monitoring. Technologies: Python, Jupyter, ML Models, Data Analysis</p>
+
+    <h3>Next-Generation Social Media Apps</h3>
+    <p><strong>GossipIN:</strong> Revolutionary voice-enabled chat application designed for AR/VR glasses. Provides hands-free, voice-first social experience with intelligent AI safety features including vocabulary learning for GenX/GenZ slang and AI-powered anti-bullying detection. Technologies: React Native, Voice Recognition, AR/VR SDK, WebRTC, Spatial Audio, NLP, ML Safety</p>
+
+    <p><strong>BuzzIt:</strong> Event broadcasting and social sharing platform that enables musicians, event organizers, and social functions to instantly broadcast events using Amazon IVS and share across multiple social media platforms simultaneously. Technologies: Amazon IVS, React Native, AWS, Social APIs, Live Streaming, WebRTC</p>
+
+    <h3>Payment & FinTech Innovation</h3>
+    <p><strong>OpenPaymentToken:</strong> World's first free, open-source, secure token origination and token processing platform. PCI-DSS compliant tokenization with enterprise-grade security. Technologies: Payment Security, Tokenization, PCI-DSS, API, Open Source</p>
+
+    <p><strong>BackpackersHome:</strong> Travel and accommodation platform connecting backpackers with local hosts and experiences worldwide. Technologies: Full Stack, Payment Gateway, Social Platform</p>
+
+    <h2>MAJOR PROJECTS</h2>
+    <p><strong>Nordea PSP & Pay:</strong> Led PSP MVP definition using MoSCoW methodology, Verifone integration, operational readiness, and merchant onboarding</p>
+    <p><strong>Cuscal & ANZ Australia (NPP):</strong> Designed and implemented real-time clearing and settlement systems</p>
+    <p><strong>FICO Falcon - Standard Chartered:</strong> Led legacy-to-Neural Engine migration for fraud case ingestion and analytics</p>
+    <p><strong>Chase Debit Modernization - JPMC:</strong> Lead SME for Vynamic-based debit switch; led backlog management and Kafka AVRO modeling</p>
+    <p><strong>HSBC ATM Migration:</strong> Delivered Smart Vista switch modernization for Bermuda, Malta, and Armenia</p>
+    <p><strong>VisionPlus NextGen - Fiserv:</strong> Defined evaluation criteria and roadmap for cloud-native card management platform</p>
+
+    <h2>TECHNICAL SKILLS & DOMAIN EXPERTISE</h2>
+
+    <p><strong>Product Management & Leadership:</strong> Product Strategy, Roadmap Management, Cross-Functional Collaboration, Market Research, UX/UI Design, Data Analysis, Stakeholder Management, Cloud-Native Platforms</p>
+
+    <p><strong>Messaging Formats & Protocols:</strong> ISO 20022 (SWIFT MX, CBPR+, HVPS+), ISO 8583, SWIFT MT, Fedwire ANSI, ACH, SEPA, IFX/OFX</p>
+
+    <p><strong>Functional Domain:</strong> Debit & Credit Cards, Card Origination, Authorization & Acquiring, Card Issuing, Payment Gateway, Tokenization, Clearing & Settlement, Fraud Detection, ATM & POS, Retail Banking, Corporate Banking</p>
+
+    <p><strong>Programming & Technologies:</strong> Java, Node.js, Python, Angular JS, Kafka, COBOL, C/C++, Oracle, MS-SQL, DB2/400</p>
+
+    <p><strong>AI/ML & Design Tools:</strong> RASA, OpenAI, VertexAI, Hugging Face, OLAMA, Figma, Adobe AEM, Adobe Captivate, Rational Rose</p>
+
+    <p><strong>Project Management & Agile:</strong> Jira, Confluence, Scrum, SAFe Agile, MS Project, Whizible, SWIFT ALM</p>
+
+    <p><strong>Compliance & Standards:</strong> PCI-DSS, ISMS 27001, CMM Level 5, ISO Standards</p>
+
+    <h2>EDUCATION & CERTIFICATIONS</h2>
+    <p><strong>MBA: International Business Management</strong> - University of Wales - Cardiff, Wales (2009)</p>
+    <p><strong>IBM Certified AI Product Manager</strong> - IBM (Issued 2025)</p>
+    <p><strong>Certified Scrum Master</strong> - Scrum Alliance US (Issued 2014, Valid till 2024)</p>
+    <p><strong>Diploma: Computer Technology</strong> - Bharati Vidyapeeth's Institute Of Technology - Pune, India (1990)</p>
+
+    <h2>KEY ACHIEVEMENTS</h2>
+    <ul>
+        <li>Increased Payment Practice revenue to over $50 million with 15% YoY growth rate over four years at Virtusa</li>
+        <li>Acquired 10 new clients in the payment space through strategic business development</li>
+        <li>Successfully retained two major clients through expert negotiation and relationship management</li>
+        <li>Doubled team billability through resource optimization and mentoring initiatives</li>
+        <li>Developed technology-driven retail payment solution that won the Stevie Business Award for best innovative product (2015)</li>
+        <li>Increased HSBC's profit margins from 18% to 25% through low-cost, efficient project delivery</li>
+        <li>Scaled prepaid card operations from 10,000 to 5 million cards at Plintron</li>
+        <li>Successfully delivered SEPA migration ahead of regulatory deadline with 43% profit margin</li>
+    </ul>
+
+</body>
+</html>`;
+
+        // Create a blob and download link
+        const blob = new Blob([atsContent], { type: 'text/html' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'Saji_Pillai_Resume_ATS.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+
+        // Open in new window for print/PDF option
+        const printWindow = window.open('', '_blank');
+        printWindow.document.write(atsContent);
+        printWindow.document.close();
+
+        // Alert user
+        alert('ATS-Compatible resume downloaded!\\n\\nThe resume has also opened in a new window where you can:\\n1. Print to PDF (Ctrl+P or Cmd+P)\\n2. Save as PDF for upload to Workday\\n3. Copy text content\\n\\nFor best ATS results, use "Print to PDF" option in your browser.');
+    }
+    </script>
 </body>
 </html>
 
