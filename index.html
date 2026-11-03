@@ -617,6 +617,35 @@
                     <div class="project-grid">
                         <div class="project-card-innovation">
                             <h4>
+                                <span class="project-icon">🛒</span>
+                                eKirana - ONDC Buyer App &amp; WhatsApp Voice Commerce
+                                <span class="innovation-badge">NEW</span>
+                            </h4>
+                            <p class="project-description">
+                                A buyer application on India's ONDC open commerce network, certified for ONDC Retail (RET10). Shoppers order groceries from real nearby shops through a mobile app or entirely inside WhatsApp, by typing or by voice note in Hindi or English. Runs on AWS with automatic deployment from GitHub.
+                            </p>
+                            <ul class="key-features">
+                                <li>ONDC Retail (RET10) certified buyer app: search, select, init, confirm, tracking, cancel, return, and IGM grievance handling</li>
+                                <li>Guided WhatsApp voice ordering: reads the list back, checks one item at a time across real shops, the shopper picks or skips, then confirms the total and pays by link, with replies in the language spoken</li>
+                                <li>Speech and language: Sarvam AI speech-to-text and text-to-speech, with Claude extracting the shopping list</li>
+                                <li>Mandate-based payments with hardware-backed signing and default spending limits, in the spirit of agent payment protocols (AP2)</li>
+                                <li>Operator console with order, supplier and escalation reports, and ONDC network observability logging</li>
+                                <li>In development: Muse, an AI voice assistant that answers WhatsApp calls over WebRTC</li>
+                            </ul>
+                            <div class="tech-stack">
+                                <span class="tech-tag">ONDC / Beckn</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">AWS Fargate</span>
+                                <span class="tech-tag">WhatsApp Cloud API</span>
+                                <span class="tech-tag">Sarvam AI</span>
+                                <span class="tech-tag">LLM</span>
+                            </div>
+                        </div>
+                        <div class="project-card-innovation">
+                            <h4>
                                 <span class="project-icon">🧬</span>
                                 ModelDB - Molecular Data Center &amp; mdc-lite
                                 <span class="innovation-badge">NEW</span>
@@ -1199,6 +1228,7 @@
                 {
                     heading: "AI & Machine Learning Projects",
                     items: [
+                        ["eKirana - ONDC Buyer App & WhatsApp Voice Commerce", "A buyer application on India's ONDC open commerce network, certified for ONDC Retail (RET10). Shoppers order groceries from real nearby shops through a mobile app or entirely inside WhatsApp, by typing or by voice note in Hindi or English. Guided voice ordering reads the list back, checks one item at a time across real shops, lets the shopper pick or skip, then confirms the total and takes payment by link, replying in the language spoken. Mandate-based payments with hardware-backed signing and default limits; IGM grievance handling; operator console with order, supplier and escalation reports; ONDC network observability logging. Runs on AWS with automatic deployment from GitHub. In development: Muse, an AI voice assistant that answers WhatsApp calls. Technologies: ONDC / Beckn, TypeScript, Node.js, React Native, PostgreSQL, AWS Fargate, WhatsApp Cloud API, Sarvam AI, LLM"],
                         ["ModelDB - Molecular Data Center & mdc-lite", "A DNA-inspired conversational data platform: query AI models, databases, images, and documents entirely in plain English - no SQL required - through a deterministic validation layer that stands between the LLM and storage. Includes a working DNA-inspired archival storage tier (AES-256-GCM encrypted data encoded as A/C/G/T base sequences), a bearer-token-secured REST API for third-party NLU/custom UI integration, and mdc-lite, a companion 348 KB embeddable encrypted key-value store for iOS, watchOS, Android, and Wear OS. Technologies: Python, FastAPI, DuckDB, Rust, NLP, RASA, AES-256-GCM, REST API"],
                         ["Investment Bot", "AI-powered trading agent bot that analyzes stock market data and provides intelligent investment recommendations. Features ChatGPT-like interface for natural language queries about stocks, market trends, and investment strategies. Technologies: Python, OpenAI, Machine Learning, NLP, Stock APIs"],
                         ["Payment Support Log Analyzer", "Advanced AI model for analyzing payment system support logs, specifically designed for ISO 20022 SWIFT CBPR+ messages. Automatically identifies issues, patterns, and anomalies in payment processing workflows. Technologies: Python, AI/ML, ISO 20022, SWIFT, NLP, Log Analysis"],
